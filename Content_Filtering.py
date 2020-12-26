@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 dataframe = pd.read_csv("movie_dataset.csv")
-print(dataframe)
+# print(dataframe)
 features = ['keywords', 'cast', 'genres', 'director']
 for feature in features:
     dataframe[feature] = dataframe[feature].fillna('')
@@ -28,10 +28,12 @@ def get_title_from_index(index):
 def get_index_from_title(title):
 	return dataframe[dataframe.title == title]["index"].values[0]
 
-movie_user_likes = "Guardians of the Galaxy"
-movie_index = get_index_from_title(movie_user_likes)
-similar_movies = list(enumerate(similarity[movie_index]))
-sorted_sim_movies = sorted(similar_movies, key = lambda x:x[1], reverse = True)
+movies_user_likes = ['Guardians of the Galaxy', 'The Avengers']
+similar_movies = []
+for movie_user_likes in movies_user_likes:
+    movie_index = get_index_from_title(movie_user_likes)
+    similar_movies = similar_movies + list(enumerate(similarity[movie_index]))
+    sorted_sim_movies = sorted(similar_movies, key = lambda x:x[1], reverse = True)
 
 cnt = 0
 for movie in sorted_sim_movies:
