@@ -27,7 +27,7 @@ def get_title_from_index(index):
 def get_index_from_title(title):
 	return dataframe[dataframe.title == title]["index"].values[0]
 
-movies_user_likes = ['Guardians of the Galaxy', 'The Avengers']
+movies_user_likes = ['The Avengers']
 similar_movies = []
 for movie_user_likes in movies_user_likes:
     movie_index = get_index_from_title(movie_user_likes)
