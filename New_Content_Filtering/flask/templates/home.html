@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 
 {% block content %} 
+    <img src="{{ url_for('static', filename='image.jpg') }}">
     <!-- {% for i in range(movies|length) %}
     <h1> {{movies[i]}} </h1>
     <p> {{director[i]}} </p>
     {% endfor %} -->
-    <img src="{{ url_for('static', filename='image.jpg') }}">
 {% endblock content %}
