@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 import pandas as pd
 
 data = pd.read_csv('final2.csv')
@@ -17,6 +17,8 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/movies')
-def hello():
+# @app.route('/movies')
+# def hello():
+#     print(type(request.args.key('movieName')))
+#     return request.args.key('movieName')
     # return render_template('home.html', movies = movies, director = director)
