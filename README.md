@@ -24,6 +24,7 @@ A type of movie recommendation in which the details of the movies are considered
 - Genre
 - Keywords
 
+
 # Folder Description #
 1. Collaborative_Filtering
     - Collab_Filtering.ipynb
@@ -41,12 +42,14 @@ A type of movie recommendation in which the details of the movies are considered
     - Recommend.ipynb : Created possible top 20 movies for each movie in the dataset.
     - Poster_path.ipynb : Extracted links for poster for each movie in the dataset using API.
   
-# Links and References #
-
-[Collaborative Filtering article](https://realpython.com/build-recommendation-engine-collaborative-filtering)  
-
-[Content Filtering video](https://www.youtube.com/watch?v=3ecNC-So0r4)
+# Links #
 
 [IMDB 5000 Movie dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
 
 [Movie datset for(esp for 2017)](https://www.kaggle.com/rounakbanik/the-movies-dataset)
+
+[Movies for 2018](https://en.wikipedia.org/wiki/List_of_American_films_of_2018)
+
+[Movies for 2019](https://en.wikipedia.org/wiki/List_of_American_films_of_2019)
+
+[Movies for 2020](https://en.wikipedia.org/wiki/List_of_American_films_of_2020)
