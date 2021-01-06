@@ -1,0 +1,33 @@
+body {
+    background-image: url(image.jpg);
+    background-color: #cccccc;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container input[type="submit"] {
+    margin-left: 1vw;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+    background: yellowgreen;
+    font-size: 1.2rem;
+}
+
+.container input[type="text"] {
+    padding: 10px;
+    width: 45vw;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid greenyellow;
+    color: white;
+}
