@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style3.css')}}">
     <title> Movies </title>
 </head>
 <body>
-    <h3> Movies you may like: </h3>
-    {% for val in data[name] %}
-        <p> {{ val }} </p>
-        <img src="{{ posters[val] }}" alt="{{ val }}">
-    {% endfor %}
+    <h2> Movies you may like: </h2>
+    <div class="total">
+        {% for val in data[name] %}
+        <div class="poster">
+            <!-- <p> {{ val }} </p> -->
+            <img src="{{ posters[val] }}" alt="{{ val }}" style="height: 200px;">
+        </div>
+        {% endfor %}
+    </div>
+    
 </body>
 </html>

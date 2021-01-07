@@ -1,0 +1,12 @@
+.poster {
+    margin: 2px 5px
+}
+
+.total {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    text-align: center;
+}
