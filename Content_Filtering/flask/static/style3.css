@@ -9,4 +9,9 @@
 
 body {
     text-align: center;
+    background-image: url(background.jpeg);
+}
+
+h1 {
+    color: chartreuse;
 }
