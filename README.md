@@ -7,6 +7,8 @@
 
 Movie Recommendation Engine - Content Based and Collaborative Filtering. Has a collection movies updated till 2020.
 
+![image](preview.png)
+
 # Collaborative Filtering #
 
 A type of movie recommendation in which the user's interests are considered and suggests movie by finding similar users. Similar users are identified by cosine similarity. This type of recommendation requires large database that stores users details, watched movies etc. The accuracy of this method completely lies on user's true/unbiased ratings.
