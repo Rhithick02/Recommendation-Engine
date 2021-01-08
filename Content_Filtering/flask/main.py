@@ -53,4 +53,7 @@ def about():
 def hello():
     movie = request.args.get('movieName')
     movie = movie.lower()
-    return render_template('recommend.html', data = data, name = movie, posters = posters)
+    if movie not in data.keys():
+        return "<h1> Movie not found in database </h1>"
+    else:
+        return render_template('recommend.html', data = data, name = movie, posters = posters)
