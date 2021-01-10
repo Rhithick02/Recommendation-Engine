@@ -12,7 +12,9 @@
         {% for val in data[name] %}
         <div class="poster">
             <!-- <p> {{ val }} </p> -->
-            <img src="{{ posters[val] }}" alt="{{ val }}" style="height: 200px;">
+            <a href="https://www.themoviedb.org/movie/{{ m_ids[val] }}">
+                <img src="{{ posters[val] }}" alt="{{ val }}" style="height: 200px;">
+            </a>
         </div>
         {% endfor %}
     </div>

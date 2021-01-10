@@ -25,17 +25,12 @@ posters = dict()
 for index, rows in df.iterrows():
     posters[rows[0]] = rows[1]
 
-
-url = "https://image.tmdb.org/t/p/original"
-tmdb = TMDb()
-tmdb.api_key = 'deb477a3c3471f6e4e39aff4352f0806'
-tmdb_movie = Movie()
-def scrape(x):
-    result = tmdb_movie.search(x)
-    m_id = result[0].id
-    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key={}'.format(m_id, tmdb.api_key))
-    data_json = response.json()
-    return url + str(data_json['poster_path'])
+# Converting movie and its id to dictionary
+df = pd.read_csv('movie_id.csv')
+df['movie_id'].fillna(0)
+movie_ids = dict()
+for index, rows in df.iterrows():
+    movie_ids[rows[0]] = rows[1]
 
 
 app = Flask(__name__)
@@ -56,4 +51,5 @@ def hello():
     if movie not in data.keys():
         return "<h1> Movie not found in database </h1>"
     else:
-        return render_template('recommend.html', data = data, name = movie, posters = posters)
+        return render_template('recommend.html', data = data, name = movie, 
+                                posters = posters, m_ids = movie_ids)
