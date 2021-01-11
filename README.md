@@ -5,7 +5,7 @@
 ![Frontend](https://img.shields.io/badge/frontend-HTML%2FCSS-blue)
 ![API](https://img.shields.io/badge/API-TMDB-fcba03)
 
-Movie Recommendation Engine - Content Based and Collaborative Filtering. Has a collection movies updated till 2020.
+Movie Recommendation Engine - Content Based and Collaborative Filtering with full deployment of content based filtering with flask. Has a collection 6000 movies till 2020.
 
 ![image](preview.png)
 
