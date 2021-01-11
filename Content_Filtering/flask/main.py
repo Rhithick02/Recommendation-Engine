@@ -51,6 +51,5 @@ def hello():
     if movie not in data.keys():
         return "<h1> Movie not found in database </h1>"
     else:
-        # print(movie)
         return render_template('recommend.html', data = data, name = movie, 
                                 posters = posters, m_ids = movie_ids)
