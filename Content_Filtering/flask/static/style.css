@@ -31,3 +31,17 @@ body {
     border-bottom: 2px solid greenyellow;
     color: white;
 }
+
+.intro {
+    color: darkorange;
+    position: relative;
+    top: 100px;
+    left: 300px;
+}
+
+/* .heading {
+    position: fixed;
+    right: 500px;
+    top: 15px;
+    color: darkviolet;
+} */
