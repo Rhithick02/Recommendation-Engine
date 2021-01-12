@@ -9,6 +9,7 @@ Movie Recommendation Engine - Content Based and Collaborative Filtering with ful
 
 ![image](preview.png)
 
+[Link to website](http://moviengine.herokuapp.com/)
 # Collaborative Filtering #
 
 A type of movie recommendation in which the user's interests are considered and suggests movie by finding similar users. Similar users are identified by cosine similarity. This type of recommendation requires large database that stores users details, watched movies etc. The accuracy of this method completely lies on user's true/unbiased ratings.
