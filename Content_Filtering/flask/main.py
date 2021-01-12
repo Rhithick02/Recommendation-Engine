@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request
 import pandas as pd
 
+# Exterior csv files are different from csv files inside flask with changes like ,
 # Converting movies and recommendation to dictionary
 df = pd.read_csv('recommend.csv')
 data = dict()
