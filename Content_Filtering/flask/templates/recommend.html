@@ -7,6 +7,12 @@
     <title> Movies </title>
 </head>
 <body>
+    <h2> Movie you liked </h2>
+    <div class="poster">
+        <a href="https://www.themoviedb.org/movie/{{ m_ids[name] }}">
+            <img src="{{ posters[name] }}" alt="{{ val }}" style="height: 250px;">
+        </a>
+    </div>
     <h1> Movies you may like </h1>
     <div class="total">
         {% for val in data[name] %}

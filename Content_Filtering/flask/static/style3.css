@@ -18,6 +18,9 @@ h1 {
     color: chartreuse;
 }
 
+h2 {
+    color: red;
+}
 a:hover {
     background-color: red;
 }
