@@ -1,9 +1,7 @@
 from flask import Flask, render_template, url_for, request
 import pandas as pd
-from tmdbv3api import Movie, TMDb
-import json
-import requests
 
+# Exterior csv files are different from csv files inside flask with changes like ,
 # Converting movies and recommendation to dictionary
 df = pd.read_csv('recommend.csv')
 data = dict()
@@ -53,3 +51,7 @@ def hello():
     else:
         return render_template('recommend.html', data = data, name = movie, 
                                 posters = posters, m_ids = movie_ids)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
