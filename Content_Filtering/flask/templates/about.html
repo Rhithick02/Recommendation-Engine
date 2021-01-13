@@ -15,16 +15,44 @@
           The database contains Hollywood movies from 1970s to 2020.
         </p>
     </div>
-    <div class="member-1">
-      <p> Rhithick Murali </p>
-      <img src="{{url_for('static', filename='Rhithick .M.jpg')}}">
-    </div>
-    <div class="member-2">
-      <p> Shivam Pradhan </p>
-      <img src="{{url_for('static', filename='Shivam Pradhan.jpeg')}}">
-    </div>
-    <div class="member-3">
-      <p> Manav Mohata </p>
-      <img src="{{url_for('static', filename='Manav Mohata.jpg')}}">
+
+    <!-- Header -->
+    <header class="bg-primary text-center py-5 mb-4">
+      <div class="container">
+        <h1 class="font-weight-light text-white">Meet the Team</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <!-- Team Member 1 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-0 shadow">
+            <img src="{{url_for('static', filename='Rhithick .M.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-0">Rhithick M</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-0 shadow">
+            <img src="{{url_for('static', filename='Shivam Pradhan.jpeg')}}" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-0">Shivam Pradhan</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-0 shadow">
+            <img src="{{url_for('static', filename='Manav Mohata.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-0">Manav Mohata</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     </div>
 {% endblock %}
