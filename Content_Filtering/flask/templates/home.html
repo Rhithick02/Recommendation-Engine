@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block head %}
-<title> Movie Recommendation System </title>
+  <title> Movie Recommendation System </title>
   <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 {% endblock %}
 
@@ -9,6 +9,7 @@
     <div class="d-flex justify-content-center" style="color: darkorange;">
         <h2><strong>Find your favourite movie sleeping somewhere...</strong></h2>
     </div>
+
     <div class="container">
         <form method="GET" action="/movies" autocomplete="off">
             <input type="text" autocomplete="off" id="Search" placeholder="Enter movie name" name="movieName" list="suggestion">
