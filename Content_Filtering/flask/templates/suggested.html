@@ -1,12 +1,13 @@
-{% extends 'layout.html' %}
-
-    {% block head %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='style3.css')}}">
     <title> Trending Movies </title>
-    {% endblock %}
-
-    {% block content %}
-    <h1> Trending Movies </h1>
+</head>
+<body>
+    <h1><strong>Trending Movies</strong></h1>
     <div class="total">
         {% for val in data %}
         <div class="poster">
@@ -16,4 +17,6 @@
         </div>
         {% endfor %}
     </div>
-    {% endblock content %}
+    
+</body>
+</html>
