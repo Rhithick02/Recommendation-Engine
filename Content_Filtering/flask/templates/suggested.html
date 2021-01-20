@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+    {% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='style3.css')}}">
+    <title> Trending Movies </title>
+    {% endblock %}
+
+    {% block content %}
+    <h1> Trending Movies </h1>
+    <div class="total">
+        {% for val in data %}
+        <div class="poster">
+            <a href="https://www.themoviedb.org/movie/{{ data[val][1] }}">
+                <img src="https://image.tmdb.org/t/p/original{{ data[val][0] }}"  alt="{{ val }}" style="height: 400px;">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock content %}

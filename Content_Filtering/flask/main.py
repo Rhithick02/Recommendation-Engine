@@ -1,5 +1,10 @@
 from flask import Flask, render_template, url_for, request
 import pandas as pd
+import numpy as np
+from tmdbv3api import Movie, TMDb
+import json
+import requests
+import urllib.request, urllib.parse, urllib.error
 
 # Exterior csv files are different from csv files inside flask with changes like ,
 # Converting movies and recommendation to dictionary
@@ -52,6 +57,21 @@ def hello():
         return render_template('recommend.html', data = data, name = movie, 
                                 posters = posters, m_ids = movie_ids)
 
+@app.route('/suggested')
+def suggest():
+    response = requests.get('https://api.themoviedb.org/3/movie/popular?api_key=deb477a3c3471f6e4e39aff4352f0806&language=en-US&page=1')
+    films = response.json()
+    film = pd.DataFrame(films['results'])
+    film = film.loc[ : , ['title' , 'poster_path' , 'id']]
+    data = dict()
+    for index, rows in film.iterrows():
+        index
+        data[rows[0]] = rows[1], rows[2]
+    #print(data)
+    #for i in data:
+    #    print(i , data[i])
+
+    return render_template('suggested.html',data = data)
 
 if __name__ == "__main__":
     app.run(debug=True)
